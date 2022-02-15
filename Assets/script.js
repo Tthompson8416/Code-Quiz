@@ -11,7 +11,7 @@ var questions = [
     },
     {
         title: "Which of the following type of variable is visible only within a function where it is defined?",
-        choices: ["Local Variable", "Global Variable", "Both of the Above", "None of the Above"], 
+        choices: ["Local Variable", "Global Variable", "Both of the Above", "None of the Above"],
         answer: "Local Variable"
     },
     {
@@ -20,7 +20,7 @@ var questions = [
         answer: "Quotes"
     },
     {
-        title: "Inside which HTML element do we put the JavaScript?", 
+        title: "Inside which HTML element do we put the JavaScript?",
         choices: ["<js>", "<scripting>", "<javascript>", "<script>"],
         answer: "<script>"
     },
@@ -120,20 +120,20 @@ function quizCompleted() {
     quizQuestions.innerHTML = "";
     countdownTime.innerHTML = "";
 
-  
+
     var createH1 = document.createElement("h1");
     createH1.setAttribute("id", "createH1");
     createH1.textContent = "Quiz Completed!"
 
     quizQuestions.appendChild(createH1);
 
-    
+
     var createP = document.createElement("p");
     createP.setAttribute("id", "createP");
 
     quizQuestions.appendChild(createP);
 
-    
+
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
         var createP2 = document.createElement("p");
@@ -143,14 +143,14 @@ function quizCompleted() {
         quizQuestions.appendChild(createP2);
     }
 
-    
+
     var createLabel = document.createElement("label");
     createLabel.setAttribute("id", "createLabel");
     createLabel.textContent = "Enter your initials: ";
 
     quizQuestions.appendChild(createLabel);
 
-    
+
     var createInput = document.createElement("input");
     createInput.setAttribute("type", "text");
     createInput.setAttribute("id", "initials");
@@ -158,7 +158,7 @@ function quizCompleted() {
 
     quizQuestions.appendChild(createInput);
 
-    
+
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id", "Submit");
@@ -188,9 +188,10 @@ function quizCompleted() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            
-            window.location.replace("./HighScores.html");
+
+            window.location.replace("./Highscores.html");
         }
+
     });
 
 }
