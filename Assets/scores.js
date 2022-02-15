@@ -1,3 +1,5 @@
+var userScore = document.querySelector("#score");
+console.log(userScore);
 var allScores = localStorage.getItem("allScores");
 if (allScores === null) {
     allScores = [];
@@ -5,9 +7,14 @@ if (allScores === null) {
     allScores = JSON.parse(allScores);
 }
 // For loops
-for (var i = 0; i < highscore.length; i++) {
+for (var i = 0; i < allScores.length; i++) {
     // Appends question title only
-    var userQuestion = questions[questionIndex].title;
-    var userChoices = questions[questionIndex].choices;
-    quizQuestions.textContent = userQuestion;
+
+    var listElement = document.createElement("li")
+    console.log(allScores);
+    listElement.textContent = allScores[i].initials + "-" + allScores[i].score;
+
+    userScore.appendChild(listElement)
+
 }
+
