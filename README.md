@@ -10,11 +10,8 @@ If my answer is correct, my time continues to countdown and I am presented with 
 
 If my chosen answer is incorrect, 15 seconds is deducted from my time, and I am presented with the next question.
 
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-<<<<<<< HEAD
-THEN I can save my initials and score and the app displays my highscores.
-=======
-THEN I can save my initials and score and the app displays my highscores.
->>>>>>> 207f5c214d5e59c9581ad0637a17fbb4e89d340b
+WHEN all questions are answered or the timer reaches 0 then the game is over.
+
+WHEN the game is over then I can save my initials and score. 
+
+Then the app displays my saved highscores.
